@@ -1,0 +1,7 @@
+node_modules/
+.env
+artifacts/*
+!artifacts/.gitkeep
+
+# Licensed audio is for the game, not source-asset redistribution.
+src/match/sounds/*.mp3

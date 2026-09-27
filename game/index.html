@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101713"><title>ELEVEN — The Penalty Lab</title>
+  <link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/styles.css">
+  <script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head>
+<body data-phase="intro">
+  <canvas id="pitch" aria-label="3D penalty shootout pitch"></canvas>
+  <div class="shade" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="ELEVEN home"><span class="brand-mark"><i></i><i></i><i></i></span>ELEVEN<span class="brand-divider"></span><span class="brand-caption">THE PENALTY LAB</span></a>
+    <div class="top-actions"><span id="connection" class="connection"><i></i><span>CONNECTING</span></span><button id="sound" class="icon-button" aria-label="Enable sound" title="Sound"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Zm5 4 5 6m0-6-5 6"/></svg></button><button id="settings-button" class="icon-button" aria-label="Open settings" title="Settings"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg></button></div>
+  </header>
+  <main>
+    <section id="intro" class="intro">
+      <div class="eyebrow"><span class="tiny-line"></span> HUMAN INSTINCT. MACHINE INTELLIGENCE.</div>
+      <h1>Eleven metres.<br>One <em>moment.</em></h1>
+      <p class="intro-copy">Just you, the ball, and a keeper that thinks.<br>Five penalties. Make them count.</p>
+      <button id="start" class="primary-button">STEP UP <span>↗</span></button>
+      <a class="team-play-link" href="/match">NEW · 11 vs 11 team play →</a>
+      <div class="intro-controls"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Aim</span><span><kbd class="space-key">SPACE</kbd> Hold & release</span></div>
+      <div class="intro-rule"><span>01 — PENALTY SHOOTOUT</span><span>PLAYER vs JEV</span></div>
+    </section>
+    <div class="venue"><span class="venue-dot"></span> THE ELEVEN GROUND <span class="venue-separator">/</span> UNDER THE LIGHTS <span class="venue-weather">18°C · CLEAR</span></div>
+    <section id="scoreboard" class="scoreboard game-only" aria-label="Match score">
+      <div class="score-team"><span class="team-tag">YOU</span><strong id="goals">00</strong><span class="score-label">GOALS</span></div><span class="score-separator">:</span><div class="score-team"><span class="team-tag ai-tag">JEV</span><strong id="saves">00</strong><span class="score-label">SAVES</span></div>
+      <div class="round-indicator"><span id="round">PENALTY 01 / 05</span><div id="shot-dots" class="shot-dots"><i class="current"></i><i></i><i></i><i></i><i></i></div></div>
+    </section>
+    <aside class="keeper-card" id="keeper-card">
+      <div class="keeper-title"><span class="eyebrow">YOUR OPPONENT</span><span class="player-number">01</span></div>
+      <h2>JEV<span class="small-star">✳</span></h2><div class="keeper-subtitle">AI GOALKEEPER</div>
+      <div class="keeper-divider"></div>
+      <div class="keeper-status"><span class="status-dot"></span><span id="keeper-state">WAITING FOR YOU</span></div>
+      <p id="keeper-description">Every shot is a new decision.</p>
+      <details id="decision-details" class="decision-details" open>
+        <summary>DECISIONS <span id="decision-count">00</span></summary>
+        <div class="decision-snapshot-heading"><span id="decision-snapshot">Waiting for a decision</span><button id="decision-latest" type="button" hidden>Latest</button></div>
+        <div id="action-probabilities" class="action-probabilities" aria-label="Action probabilities"></div>
+        <p class="probability-note">Action probabilities, not save probabilities. The selected action is marked.</p>
+        <div class="history-heading">SHOT HISTORY <span>Time starts at each phase</span></div>
+        <p id="decision-empty">No decisions for this shot yet.</p>
+        <ol id="decision-history" class="decision-history" aria-label="Decisions for this shot"></ol>
+        <p id="decision-note" class="decision-note">Decisions appear as responses arrive.</p>
+      </details>
+      <div class="keeper-footer"><span id="decision-label">LIVE DECISION</span><span id="latency">— ms</span></div>
+    </aside>
+    <div id="aim-reticle" class="aim-reticle" aria-hidden="true"><span></span><i></i><b>AIM</b></div>
+    <div id="floating-hint" class="floating-hint game-only">PICK YOUR CORNER</div>
+    <section id="shot-controls" class="shot-controls game-only">
+      <div class="power-heading"><span>SHOT POWER</span><b id="power-value">0<span>%</span></b></div>
+      <div class="power-track"><div class="sweet-zone"></div><div id="power-fill"></div><div class="power-mark"></div></div>
+      <div class="power-labels"><span>PLACEMENT</span><span>POWER</span></div>
+      <button id="shoot" class="shoot-button"><span class="button-key">SPACE</span><span id="shoot-label">HOLD TO SHOOT</span><span class="button-arrow">↑</span></button>
+      <p class="aim-help">Mouse or <span>W A S D</span> to aim <i>·</i> Release to strike</p>
+    </section>
+    <div class="bottom-left game-only"><span class="eyebrow">THE PENALTY</span><strong>Trust your instinct.</strong><span id="shot-speed">11.00 m <i>/</i> RIGHT FOOT</span></div>
+    <div class="bottom-right game-only"><span>ONE SHOT.</span><strong>ALL YOU.</strong></div>
+    <section id="result" class="result hidden" aria-live="polite"><span class="eyebrow" id="result-kicker">PENALTY 01</span><h2 id="result-title">Goal.</h2><p id="result-description"></p><div class="result-stats"><div><strong id="result-speed">—</strong><span>KM/H</span></div><div><strong id="result-time">—</strong><span>JEV RESPONSE</span></div><div><strong id="result-place">—</strong><span>PLACEMENT</span></div></div><div class="result-actions"><button id="next" class="primary-button">NEXT PENALTY <span>→</span></button><button id="replay" class="secondary-button">↺ WATCH REPLAY</button></div></section>
+    <div id="replay-label" class="replay-label hidden"><span class="red-dot"></span> REPLAY <span>0.35×</span><span id="replay-action"></span><button id="exit-replay">BACK TO RESULT ↗</button></div>
+    <div id="toast" class="toast hidden" role="status"></div>
+    <div id="loading" class="loading"><span class="brand-mark"><i></i><i></i><i></i></span><p>LIGHTING THE PITCH</p></div>
+    <div id="webgl-error" class="webgl-error hidden"><h2>The pitch could not load.</h2><p>This game needs WebGL 2. Try a current browser with hardware acceleration enabled.</p><button onclick="location.reload()" class="primary-button">TRY AGAIN</button></div>
+  </main>
+  <footer class="intro-footer"><span>FOOTBALL, REIMAGINED.</span><span>BUILT FOR THE MOMENT <i>↗</i></span><span class="prototype-tag">PROTOTYPE / 001</span></footer>
+  <dialog id="settings"><form method="dialog"><button class="close-dialog" aria-label="Close settings">×</button></form><span class="eyebrow">MAKE IT YOUR MATCH</span><h2>Match settings.</h2><label>Goalkeeper<select id="mode"><option value="live">JEV · Live AI</option><option value="practice">Practice · Scripted keeper</option></select></label><p>Live mode uses JEV decisions. Practice uses local rules.</p><label>Display quality<select id="quality"><option value="high">High · Stadium effects</option><option value="low">Performance · Lower resolution</option></select></label><div class="control-guide"><p><kbd>W A S D</kbd> or mouse <span>Aim at the goal</span></p><p><kbd>SPACE</kbd> or shoot button <span>Hold to charge. Release to kick.</span></p><p><kbd>R</kbd><span>Replay the last shot</span></p><p><kbd>ENTER</kbd><span>Start or take the next penalty</span></p></div><button id="restart" class="secondary-button">RESTART SHOOTOUT ↗</button><p class="settings-note">JEV sees visible movement. Your aim remains private until the ball is struck.</p></dialog>
+  <script type="module" src="/src/game.mjs"></script>
+</body>
+</html>

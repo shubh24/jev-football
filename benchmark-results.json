@@ -1,0 +1,5875 @@
+{
+  "created_utc": "2026-09-20T00:34:03.083919+00:00",
+  "method": "Sequential HTTPS requests with a reused connection; two warmups excluded. Eight interleaved samples per question count. Synthetic 22-player states with small position changes. Time includes full response transfer and JSON decoding. No retries.",
+  "limitations": "Small timing and schema test only. No simulated match, sustained 10Hz load, pass targets, shot direction/power, or coordination/skill validation.",
+  "summary": {
+    "1": {
+      "samples": 8,
+      "median_ms": 119.26,
+      "min_ms": 93.48,
+      "max_ms": 170.08,
+      "within_100ms": 1
+    },
+    "11": {
+      "samples": 8,
+      "median_ms": 140.68,
+      "min_ms": 119.36,
+      "max_ms": 183.49,
+      "within_100ms": 0
+    },
+    "33": {
+      "samples": 8,
+      "median_ms": 155.56,
+      "min_ms": 113.53,
+      "max_ms": 303.73,
+      "within_100ms": 0
+    }
+  },
+  "records": [
+    {
+      "index": 0,
+      "warmup": true,
+      "questions": 1,
+      "elapsed_ms": 219.26,
+      "request_bytes": 3811,
+      "response_bytes": 296,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2453,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.52,
+          "probabilities": {
+            "hold": 0.06,
+            "southwest": 0.02,
+            "northeast": 0.12,
+            "southeast": 0.11,
+            "north": 0.02,
+            "west": 0.05,
+            "east": 0.59,
+            "south": 0.02,
+            "northwest": 0.01
+          }
+        }
+      }
+    },
+    {
+      "index": 1,
+      "warmup": true,
+      "questions": 33,
+      "elapsed_ms": 127.44,
+      "request_bytes": 12793,
+      "response_bytes": 4538,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5946,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.87,
+          "probabilities": {
+            "southwest": 0.0,
+            "northwest": 0.0,
+            "northeast": 0.01,
+            "east": 0.05,
+            "north": 0.01,
+            "south": 0.02,
+            "southeast": 0.01,
+            "hold": 0.89,
+            "west": 0.01
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "none": 1.0,
+            "dive_north": 0.0,
+            "catch": 0.0,
+            "dive_south": 0.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.34,
+          "probabilities": {
+            "southwest": 0.02,
+            "northwest": 0.01,
+            "northeast": 0.06,
+            "east": 0.42,
+            "north": 0.01,
+            "south": 0.07,
+            "southeast": 0.31,
+            "hold": 0.06,
+            "west": 0.04
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.75,
+          "probabilities": {
+            "none": 0.8,
+            "pass": 0.02,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "defend": 0.17
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "southwest": 0.04,
+            "northwest": 0.01,
+            "northeast": 0.13,
+            "east": 0.44,
+            "north": 0.03,
+            "south": 0.04,
+            "southeast": 0.17,
+            "hold": 0.08,
+            "west": 0.06
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.59,
+          "probabilities": {
+            "pass": 0.1,
+            "none": 0.68,
+            "shoot": 0.0,
+            "tackle": 0.03,
+            "defend": 0.19
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.35,
+          "probabilities": {
+            "southwest": 0.03,
+            "northwest": 0.01,
+            "northeast": 0.16,
+            "east": 0.43,
+            "north": 0.03,
+            "south": 0.03,
+            "southeast": 0.22,
+            "hold": 0.05,
+            "west": 0.04
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.66,
+          "probabilities": {
+            "pass": 0.08,
+            "none": 0.74,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "defend": 0.17
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "southwest": 0.07,
+            "northwest": 0.01,
+            "northeast": 0.13,
+            "east": 0.45,
+            "north": 0.03,
+            "south": 0.02,
+            "southeast": 0.18,
+            "hold": 0.06,
+            "west": 0.05
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.63,
+          "probabilities": {
+            "pass": 0.13,
+            "none": 0.72,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "defend": 0.14
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.39,
+          "probabilities": {
+            "southwest": 0.04,
+            "northwest": 0.01,
+            "northeast": 0.08,
+            "east": 0.46,
+            "north": 0.02,
+            "south": 0.08,
+            "southeast": 0.2,
+            "hold": 0.04,
+            "west": 0.07
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.65,
+          "probabilities": {
+            "pass": 0.07,
+            "none": 0.73,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "defend": 0.19
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.33
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.43,
+          "probabilities": {
+            "southwest": 0.04,
+            "northwest": 0.01,
+            "northeast": 0.13,
+            "east": 0.5,
+            "north": 0.02,
+            "south": 0.02,
+            "southeast": 0.14,
+            "hold": 0.06,
+            "west": 0.08
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.5,
+          "probabilities": {
+            "pass": 0.13,
+            "none": 0.6,
+            "shoot": 0.0,
+            "tackle": 0.06,
+            "defend": 0.21
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.38,
+          "probabilities": {
+            "southwest": 0.09,
+            "northwest": 0.01,
+            "northeast": 0.11,
+            "east": 0.45,
+            "north": 0.02,
+            "south": 0.03,
+            "southeast": 0.17,
+            "hold": 0.04,
+            "west": 0.08
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.59,
+          "probabilities": {
+            "pass": 0.12,
+            "none": 0.68,
+            "shoot": 0.0,
+            "tackle": 0.03,
+            "defend": 0.17
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "southwest": 0.06,
+            "northwest": 0.02,
+            "northeast": 0.18,
+            "east": 0.44,
+            "north": 0.03,
+            "south": 0.02,
+            "southeast": 0.13,
+            "hold": 0.05,
+            "west": 0.07
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.57,
+          "probabilities": {
+            "pass": 0.14,
+            "none": 0.66,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "defend": 0.19
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.57,
+          "probabilities": {
+            "southwest": 0.01,
+            "northwest": 0.01,
+            "northeast": 0.12,
+            "east": 0.6,
+            "north": 0.01,
+            "south": 0.02,
+            "southeast": 0.15,
+            "hold": 0.05,
+            "west": 0.03
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.46,
+          "probabilities": {
+            "pass": 0.5599999999999999,
+            "none": 0.13,
+            "shoot": 0.29,
+            "tackle": 0.01,
+            "defend": 0.01
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.48
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.15,
+          "probabilities": {
+            "southwest": 0.15,
+            "northwest": 0.03,
+            "northeast": 0.15,
+            "east": 0.25,
+            "north": 0.02,
+            "south": 0.1,
+            "southeast": 0.18,
+            "hold": 0.02,
+            "west": 0.1
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.46,
+          "probabilities": {
+            "pass": 0.17,
+            "none": 0.57,
+            "shoot": 0.01,
+            "tackle": 0.07,
+            "defend": 0.18
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.45
+        }
+      }
+    },
+    {
+      "index": 2,
+      "warmup": false,
+      "questions": 11,
+      "elapsed_ms": 119.84,
+      "request_bytes": 7942,
+      "response_bytes": 2421,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 4413,
+        "output_tokens": 994
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.89,
+          "probabilities": {
+            "east": 0.04,
+            "southwest": 0.0,
+            "south": 0.01,
+            "north": 0.01,
+            "northwest": 0.0,
+            "west": 0.01,
+            "northeast": 0.01,
+            "southeast": 0.01,
+            "hold": 0.91
+          }
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.31,
+          "probabilities": {
+            "east": 0.37,
+            "hold": 0.08,
+            "south": 0.08,
+            "northwest": 0.01,
+            "north": 0.02,
+            "west": 0.05,
+            "northeast": 0.07,
+            "southwest": 0.04,
+            "southeast": 0.28
+          }
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "east": 0.48,
+            "southeast": 0.13,
+            "south": 0.03,
+            "northwest": 0.01,
+            "north": 0.02,
+            "west": 0.06,
+            "northeast": 0.15,
+            "hold": 0.08,
+            "southwest": 0.04
+          }
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.32,
+          "probabilities": {
+            "east": 0.39,
+            "hold": 0.07,
+            "south": 0.05,
+            "north": 0.02,
+            "northwest": 0.02,
+            "west": 0.08,
+            "northeast": 0.11,
+            "southeast": 0.19,
+            "southwest": 0.07
+          }
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.38,
+          "probabilities": {
+            "east": 0.45,
+            "southeast": 0.1,
+            "south": 0.02,
+            "north": 0.02,
+            "northwest": 0.02,
+            "west": 0.08,
+            "northeast": 0.15,
+            "southwest": 0.08,
+            "hold": 0.08
+          }
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.38,
+          "probabilities": {
+            "east": 0.45,
+            "southeast": 0.19,
+            "south": 0.07,
+            "north": 0.02,
+            "northwest": 0.01,
+            "west": 0.07,
+            "northeast": 0.09,
+            "hold": 0.05,
+            "southwest": 0.05
+          }
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.43,
+          "probabilities": {
+            "east": 0.49,
+            "hold": 0.07,
+            "south": 0.03,
+            "north": 0.02,
+            "northwest": 0.02,
+            "west": 0.08,
+            "northeast": 0.14,
+            "southwest": 0.04,
+            "southeast": 0.11
+          }
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "east": 0.48,
+            "hold": 0.05,
+            "south": 0.02,
+            "north": 0.02,
+            "northwest": 0.01,
+            "west": 0.08,
+            "northeast": 0.13,
+            "southwest": 0.06,
+            "southeast": 0.15
+          }
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "east": 0.48,
+            "hold": 0.06,
+            "south": 0.02,
+            "northwest": 0.02,
+            "north": 0.02,
+            "west": 0.1,
+            "northeast": 0.14,
+            "southwest": 0.07,
+            "southeast": 0.09
+          }
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.53,
+          "probabilities": {
+            "east": 0.58,
+            "hold": 0.06,
+            "south": 0.01,
+            "northwest": 0.01,
+            "north": 0.03,
+            "west": 0.05,
+            "northeast": 0.14,
+            "southwest": 0.02,
+            "southeast": 0.1
+          }
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.2,
+          "probabilities": {
+            "east": 0.3,
+            "hold": 0.04,
+            "south": 0.12,
+            "northwest": 0.02,
+            "north": 0.03,
+            "west": 0.08,
+            "northeast": 0.18,
+            "southeast": 0.12,
+            "southwest": 0.11
+          }
+        }
+      }
+    },
+    {
+      "index": 3,
+      "warmup": false,
+      "questions": 1,
+      "elapsed_ms": 170.08,
+      "request_bytes": 3811,
+      "response_bytes": 296,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2453,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.53,
+          "probabilities": {
+            "east": 0.59,
+            "north": 0.02,
+            "northeast": 0.09,
+            "west": 0.05,
+            "southeast": 0.13,
+            "southwest": 0.02,
+            "hold": 0.07,
+            "south": 0.02,
+            "northwest": 0.01
+          }
+        }
+      }
+    },
+    {
+      "index": 4,
+      "warmup": false,
+      "questions": 33,
+      "elapsed_ms": 135.47,
+      "request_bytes": 12794,
+      "response_bytes": 4543,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5947,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.89,
+          "probabilities": {
+            "hold": 0.91,
+            "southeast": 0.01,
+            "south": 0.01,
+            "west": 0.01,
+            "north": 0.01,
+            "northwest": 0.0,
+            "northeast": 0.01,
+            "southwest": 0.0,
+            "east": 0.04
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "dive_south": 0.0,
+            "dive_north": 0.0,
+            "none": 1.0,
+            "catch": 0.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.26,
+          "probabilities": {
+            "west": 0.04,
+            "south": 0.11,
+            "southeast": 0.29,
+            "hold": 0.11,
+            "north": 0.02,
+            "northwest": 0.01,
+            "southwest": 0.04,
+            "east": 0.33,
+            "northeast": 0.05
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.75,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.17,
+            "none": 0.8,
+            "pass": 0.02,
+            "tackle": 0.01
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "west": 0.06,
+            "southeast": 0.13,
+            "hold": 0.09,
+            "south": 0.03,
+            "north": 0.03,
+            "northwest": 0.02,
+            "southwest": 0.04,
+            "northeast": 0.14,
+            "east": 0.45999999999999996
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.7,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.12,
+            "none": 0.77,
+            "pass": 0.08,
+            "tackle": 0.03
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.34,
+          "probabilities": {
+            "west": 0.05,
+            "southeast": 0.17,
+            "south": 0.05,
+            "hold": 0.07,
+            "north": 0.03,
+            "northwest": 0.01,
+            "southwest": 0.05,
+            "northeast": 0.16,
+            "east": 0.41
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.68,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.16,
+            "none": 0.75,
+            "pass": 0.08,
+            "tackle": 0.01
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.26
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "west": 0.07,
+            "southeast": 0.11,
+            "hold": 0.11,
+            "south": 0.02,
+            "north": 0.03,
+            "northwest": 0.02,
+            "northeast": 0.14,
+            "southwest": 0.07,
+            "east": 0.43
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.72,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.17,
+            "none": 0.77,
+            "pass": 0.05,
+            "tackle": 0.01
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.26
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "west": 0.05,
+            "south": 0.08,
+            "southeast": 0.2,
+            "hold": 0.05,
+            "north": 0.01,
+            "northwest": 0.01,
+            "southwest": 0.05,
+            "east": 0.48,
+            "northeast": 0.07
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.7,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.17,
+            "none": 0.76,
+            "pass": 0.06,
+            "tackle": 0.01
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.47,
+          "probabilities": {
+            "west": 0.09,
+            "southeast": 0.13,
+            "south": 0.03,
+            "hold": 0.06,
+            "north": 0.01,
+            "northwest": 0.01,
+            "northeast": 0.11,
+            "southwest": 0.03,
+            "east": 0.53
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.55,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.15,
+            "none": 0.64,
+            "pass": 0.14,
+            "tackle": 0.07
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.38,
+          "probabilities": {
+            "west": 0.08,
+            "south": 0.03,
+            "southeast": 0.13,
+            "hold": 0.06,
+            "north": 0.03,
+            "northwest": 0.02,
+            "northeast": 0.14,
+            "southwest": 0.07,
+            "east": 0.44
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.64,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.21,
+            "none": 0.72,
+            "pass": 0.05,
+            "tackle": 0.02
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.26
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "west": 0.12,
+            "south": 0.02,
+            "hold": 0.08,
+            "southeast": 0.09,
+            "north": 0.03,
+            "northwest": 0.02,
+            "southwest": 0.07,
+            "east": 0.44,
+            "northeast": 0.13
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.65,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.19,
+            "none": 0.72,
+            "pass": 0.08,
+            "tackle": 0.01
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.63,
+          "probabilities": {
+            "west": 0.03,
+            "south": 0.01,
+            "hold": 0.05,
+            "southeast": 0.11,
+            "north": 0.01,
+            "northwest": 0.01,
+            "northeast": 0.1,
+            "southwest": 0.01,
+            "east": 0.67
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.31,
+          "probabilities": {
+            "shoot": 0.36,
+            "defend": 0.01,
+            "none": 0.18,
+            "pass": 0.44,
+            "tackle": 0.01
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.47
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.19,
+          "probabilities": {
+            "hold": 0.02,
+            "south": 0.11,
+            "southeast": 0.13,
+            "west": 0.1,
+            "north": 0.03,
+            "northwest": 0.03,
+            "east": 0.28,
+            "northeast": 0.15,
+            "southwest": 0.15
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.49,
+          "probabilities": {
+            "shoot": 0.01,
+            "defend": 0.22,
+            "none": 0.59,
+            "pass": 0.1,
+            "tackle": 0.08
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.43
+        }
+      }
+    },
+    {
+      "index": 5,
+      "warmup": false,
+      "questions": 33,
+      "elapsed_ms": 151.36,
+      "request_bytes": 12794,
+      "response_bytes": 4540,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5947,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.86,
+          "probabilities": {
+            "northwest": 0.0,
+            "hold": 0.87,
+            "southeast": 0.01,
+            "northeast": 0.02,
+            "southwest": 0.0,
+            "east": 0.05,
+            "south": 0.02,
+            "north": 0.02,
+            "west": 0.01
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "dive_south": 0.0,
+            "dive_north": 0.0,
+            "catch": 0.0,
+            "none": 1.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.31,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.07,
+            "southeast": 0.3,
+            "northeast": 0.07,
+            "east": 0.38,
+            "southwest": 0.03,
+            "south": 0.08,
+            "north": 0.02,
+            "west": 0.04
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.74,
+          "probabilities": {
+            "defend": 0.17,
+            "tackle": 0.01,
+            "none": 0.79,
+            "pass": 0.03,
+            "shoot": 0.0
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "northwest": 0.02,
+            "hold": 0.08,
+            "southeast": 0.16,
+            "northeast": 0.14,
+            "southwest": 0.05,
+            "east": 0.42,
+            "south": 0.03,
+            "north": 0.03,
+            "west": 0.07
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.62,
+          "probabilities": {
+            "defend": 0.16,
+            "tackle": 0.03,
+            "none": 0.7,
+            "pass": 0.11,
+            "shoot": 0.0
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.3,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.05,
+            "southeast": 0.18,
+            "northeast": 0.14,
+            "southwest": 0.08,
+            "east": 0.38,
+            "south": 0.05,
+            "west": 0.08,
+            "north": 0.03
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.6,
+          "probabilities": {
+            "defend": 0.14,
+            "tackle": 0.01,
+            "none": 0.68,
+            "pass": 0.17,
+            "shoot": 0.0
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "northwest": 0.02,
+            "hold": 0.08,
+            "southeast": 0.13,
+            "northeast": 0.16,
+            "east": 0.42,
+            "southwest": 0.06,
+            "south": 0.02,
+            "west": 0.07,
+            "north": 0.04
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.64,
+          "probabilities": {
+            "defend": 0.19,
+            "tackle": 0.01,
+            "none": 0.71,
+            "pass": 0.09,
+            "shoot": 0.0
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.25
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.04,
+            "southeast": 0.25,
+            "northeast": 0.08,
+            "east": 0.47,
+            "southwest": 0.03,
+            "south": 0.06,
+            "west": 0.05,
+            "north": 0.01
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.64,
+          "probabilities": {
+            "defend": 0.21,
+            "tackle": 0.01,
+            "none": 0.71,
+            "pass": 0.07,
+            "shoot": 0.0
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.32
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "northwest": 0.02,
+            "hold": 0.05,
+            "southeast": 0.16999999999999998,
+            "northeast": 0.13,
+            "southwest": 0.04,
+            "east": 0.48,
+            "south": 0.02,
+            "west": 0.07,
+            "north": 0.02
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.58,
+          "probabilities": {
+            "defend": 0.24,
+            "tackle": 0.06,
+            "none": 0.67,
+            "pass": 0.03,
+            "shoot": 0.0
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.04,
+            "southeast": 0.16,
+            "northeast": 0.15,
+            "southwest": 0.07,
+            "east": 0.45,
+            "south": 0.03,
+            "west": 0.07,
+            "north": 0.02
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.51,
+          "probabilities": {
+            "defend": 0.26,
+            "tackle": 0.02,
+            "none": 0.62,
+            "pass": 0.1,
+            "shoot": 0.0
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.34,
+          "probabilities": {
+            "northwest": 0.03,
+            "hold": 0.05,
+            "southeast": 0.12,
+            "northeast": 0.12,
+            "southwest": 0.08,
+            "east": 0.41,
+            "south": 0.02,
+            "west": 0.15,
+            "north": 0.02
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.62,
+          "probabilities": {
+            "defend": 0.19,
+            "tackle": 0.02,
+            "none": 0.7,
+            "pass": 0.09,
+            "shoot": 0.0
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.54,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.06,
+            "southeast": 0.15,
+            "northeast": 0.1,
+            "east": 0.59,
+            "southwest": 0.02,
+            "south": 0.02,
+            "west": 0.04,
+            "north": 0.01
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.37,
+          "probabilities": {
+            "defend": 0.01,
+            "tackle": 0.01,
+            "none": 0.15,
+            "pass": 0.49,
+            "shoot": 0.34
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.47
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.13,
+          "probabilities": {
+            "northwest": 0.05,
+            "hold": 0.03,
+            "southeast": 0.11,
+            "northeast": 0.13,
+            "east": 0.22,
+            "southwest": 0.18,
+            "south": 0.11,
+            "north": 0.04,
+            "west": 0.13
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.4,
+          "probabilities": {
+            "defend": 0.22,
+            "tackle": 0.1,
+            "none": 0.52,
+            "pass": 0.15,
+            "shoot": 0.01
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.41
+        }
+      }
+    },
+    {
+      "index": 6,
+      "warmup": false,
+      "questions": 11,
+      "elapsed_ms": 156.39,
+      "request_bytes": 7943,
+      "response_bytes": 2450,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 4414,
+        "output_tokens": 994
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.89,
+          "probabilities": {
+            "northwest": 0.0,
+            "hold": 0.92,
+            "southeast": 0.0,
+            "northeast": 0.01,
+            "east": 0.04,
+            "southwest": 0.0,
+            "south": 0.01,
+            "west": 0.01,
+            "north": 0.01
+          }
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.31,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.08,
+            "southeast": 0.32,
+            "northeast": 0.06,
+            "east": 0.38,
+            "southwest": 0.03,
+            "south": 0.07,
+            "west": 0.03,
+            "north": 0.02
+          }
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.4,
+          "probabilities": {
+            "northwest": 0.02,
+            "hold": 0.1,
+            "southeast": 0.13,
+            "northeast": 0.13,
+            "southwest": 0.03,
+            "east": 0.45999999999999996,
+            "south": 0.03,
+            "west": 0.08,
+            "north": 0.02
+          }
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.35,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.06,
+            "southeast": 0.19,
+            "northeast": 0.18,
+            "southwest": 0.04,
+            "east": 0.42,
+            "south": 0.03,
+            "north": 0.02,
+            "west": 0.05
+          }
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.09,
+            "southeast": 0.16,
+            "northeast": 0.14,
+            "east": 0.45,
+            "southwest": 0.05,
+            "south": 0.02,
+            "north": 0.02,
+            "west": 0.06
+          }
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.38,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.05,
+            "southeast": 0.22,
+            "northeast": 0.08,
+            "southwest": 0.05,
+            "east": 0.44,
+            "south": 0.08,
+            "west": 0.06,
+            "north": 0.01
+          }
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.46,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.06,
+            "southeast": 0.12,
+            "northeast": 0.14,
+            "east": 0.51,
+            "southwest": 0.04,
+            "south": 0.02,
+            "west": 0.08,
+            "north": 0.02
+          }
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.38,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.04,
+            "southeast": 0.18,
+            "northeast": 0.14,
+            "southwest": 0.07,
+            "east": 0.44,
+            "south": 0.03,
+            "west": 0.07,
+            "north": 0.02
+          }
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.4,
+          "probabilities": {
+            "northwest": 0.02,
+            "hold": 0.05,
+            "southeast": 0.12,
+            "northeast": 0.14,
+            "southwest": 0.08,
+            "east": 0.45999999999999996,
+            "south": 0.02,
+            "north": 0.02,
+            "west": 0.09
+          }
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.51,
+          "probabilities": {
+            "northwest": 0.01,
+            "hold": 0.07,
+            "southeast": 0.14,
+            "northeast": 0.1,
+            "east": 0.57,
+            "southwest": 0.02,
+            "south": 0.02,
+            "west": 0.05,
+            "north": 0.02
+          }
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.21,
+          "probabilities": {
+            "northwest": 0.02,
+            "hold": 0.02,
+            "southeast": 0.15,
+            "northeast": 0.23,
+            "southwest": 0.1,
+            "east": 0.29,
+            "south": 0.11,
+            "north": 0.02,
+            "west": 0.06
+          }
+        }
+      }
+    },
+    {
+      "index": 7,
+      "warmup": false,
+      "questions": 1,
+      "elapsed_ms": 93.48,
+      "request_bytes": 3809,
+      "response_bytes": 295,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2451,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.62,
+          "probabilities": {
+            "west": 0.04,
+            "hold": 0.04,
+            "southeast": 0.11,
+            "northeast": 0.1,
+            "east": 0.67,
+            "southwest": 0.01,
+            "northwest": 0.01,
+            "north": 0.01,
+            "south": 0.01
+          }
+        }
+      }
+    },
+    {
+      "index": 8,
+      "warmup": false,
+      "questions": 11,
+      "elapsed_ms": 119.36,
+      "request_bytes": 7942,
+      "response_bytes": 2431,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 4413,
+        "output_tokens": 994
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.87,
+          "probabilities": {
+            "east": 0.05,
+            "north": 0.02,
+            "northeast": 0.01,
+            "west": 0.01,
+            "southeast": 0.01,
+            "southwest": 0.0,
+            "hold": 0.89,
+            "south": 0.01,
+            "northwest": 0.0
+          }
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.29,
+          "probabilities": {
+            "east": 0.37,
+            "north": 0.01,
+            "northeast": 0.07,
+            "west": 0.05,
+            "southeast": 0.29,
+            "southwest": 0.04,
+            "hold": 0.08,
+            "south": 0.08,
+            "northwest": 0.01
+          }
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "hold": 0.1,
+            "north": 0.02,
+            "northeast": 0.13,
+            "west": 0.07,
+            "southeast": 0.16,
+            "southwest": 0.04,
+            "east": 0.43,
+            "south": 0.03,
+            "northwest": 0.02
+          }
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.33,
+          "probabilities": {
+            "hold": 0.05,
+            "north": 0.03,
+            "northeast": 0.17,
+            "west": 0.06,
+            "southeast": 0.18,
+            "southwest": 0.05,
+            "east": 0.41,
+            "south": 0.04,
+            "northwest": 0.01
+          }
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "east": 0.42,
+            "north": 0.04,
+            "northeast": 0.13999999999999999,
+            "west": 0.06,
+            "southeast": 0.13,
+            "southwest": 0.08,
+            "hold": 0.09,
+            "south": 0.02,
+            "northwest": 0.02
+          }
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.43,
+          "probabilities": {
+            "hold": 0.04,
+            "north": 0.01,
+            "northeast": 0.08,
+            "west": 0.06,
+            "southeast": 0.18,
+            "southwest": 0.05,
+            "east": 0.5,
+            "south": 0.07,
+            "northwest": 0.01
+          }
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.44,
+          "probabilities": {
+            "east": 0.51,
+            "north": 0.02,
+            "northeast": 0.14,
+            "west": 0.08,
+            "southeast": 0.12,
+            "southwest": 0.05,
+            "hold": 0.05,
+            "south": 0.02,
+            "northwest": 0.01
+          }
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.43,
+          "probabilities": {
+            "hold": 0.04,
+            "north": 0.02,
+            "northeast": 0.14,
+            "west": 0.08,
+            "southeast": 0.12,
+            "southwest": 0.06,
+            "east": 0.5,
+            "south": 0.02,
+            "northwest": 0.02
+          }
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.33,
+          "probabilities": {
+            "east": 0.4,
+            "north": 0.03,
+            "northeast": 0.21,
+            "west": 0.09,
+            "southeast": 0.1,
+            "southwest": 0.07,
+            "hold": 0.04,
+            "south": 0.02,
+            "northwest": 0.04
+          }
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.6,
+          "probabilities": {
+            "hold": 0.05,
+            "north": 0.02,
+            "northeast": 0.11,
+            "west": 0.03,
+            "southeast": 0.1,
+            "southwest": 0.02,
+            "east": 0.64,
+            "south": 0.02,
+            "northwest": 0.01
+          }
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.22,
+          "probabilities": {
+            "east": 0.3,
+            "north": 0.05,
+            "northeast": 0.2,
+            "west": 0.06,
+            "southeast": 0.15,
+            "southwest": 0.09,
+            "hold": 0.03,
+            "south": 0.1,
+            "northwest": 0.02
+          }
+        }
+      }
+    },
+    {
+      "index": 9,
+      "warmup": false,
+      "questions": 33,
+      "elapsed_ms": 202.3,
+      "request_bytes": 12795,
+      "response_bytes": 4539,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5948,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.88,
+          "probabilities": {
+            "south": 0.01,
+            "north": 0.02,
+            "southwest": 0.0,
+            "northeast": 0.01,
+            "west": 0.01,
+            "hold": 0.9,
+            "northwest": 0.0,
+            "southeast": 0.01,
+            "east": 0.04
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "dive_south": 0.0,
+            "catch": 0.0,
+            "dive_north": 0.0,
+            "none": 1.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.35,
+          "probabilities": {
+            "south": 0.08,
+            "north": 0.01,
+            "southwest": 0.03,
+            "northeast": 0.06,
+            "west": 0.03,
+            "southeast": 0.3,
+            "northwest": 0.01,
+            "hold": 0.06,
+            "east": 0.42
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.74,
+          "probabilities": {
+            "tackle": 0.01,
+            "shoot": 0.0,
+            "none": 0.79,
+            "pass": 0.03,
+            "defend": 0.17
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "south": 0.04,
+            "southwest": 0.04,
+            "north": 0.03,
+            "northeast": 0.14,
+            "west": 0.07,
+            "southeast": 0.14,
+            "northwest": 0.02,
+            "hold": 0.09,
+            "east": 0.43
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.62,
+          "probabilities": {
+            "tackle": 0.02,
+            "shoot": 0.0,
+            "none": 0.7,
+            "pass": 0.13,
+            "defend": 0.15
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.32,
+          "probabilities": {
+            "south": 0.04,
+            "north": 0.02,
+            "southwest": 0.06,
+            "northeast": 0.14,
+            "west": 0.06,
+            "hold": 0.05,
+            "northwest": 0.01,
+            "southeast": 0.22,
+            "east": 0.4
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.65,
+          "probabilities": {
+            "tackle": 0.01,
+            "shoot": 0.0,
+            "none": 0.72,
+            "pass": 0.15,
+            "defend": 0.12
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.34,
+          "probabilities": {
+            "south": 0.03,
+            "north": 0.03,
+            "southwest": 0.07,
+            "northeast": 0.13,
+            "west": 0.06,
+            "hold": 0.12,
+            "northwest": 0.01,
+            "southeast": 0.14,
+            "east": 0.41
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.64,
+          "probabilities": {
+            "tackle": 0.01,
+            "shoot": 0.0,
+            "none": 0.72,
+            "pass": 0.08,
+            "defend": 0.19
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.24
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "south": 0.07,
+            "southwest": 0.06,
+            "north": 0.01,
+            "northeast": 0.07,
+            "west": 0.07,
+            "hold": 0.05,
+            "northwest": 0.01,
+            "southeast": 0.18,
+            "east": 0.48
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.66,
+          "probabilities": {
+            "tackle": 0.01,
+            "shoot": 0.0,
+            "none": 0.72,
+            "pass": 0.08,
+            "defend": 0.19
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.32
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "south": 0.03,
+            "southwest": 0.05,
+            "north": 0.02,
+            "northeast": 0.13,
+            "west": 0.09,
+            "southeast": 0.12,
+            "northwest": 0.02,
+            "hold": 0.07,
+            "east": 0.47
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.55,
+          "probabilities": {
+            "tackle": 0.04,
+            "shoot": 0.0,
+            "none": 0.64,
+            "pass": 0.14,
+            "defend": 0.18
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.39,
+          "probabilities": {
+            "south": 0.02,
+            "north": 0.02,
+            "southwest": 0.06,
+            "northeast": 0.13,
+            "west": 0.06,
+            "southeast": 0.18,
+            "northwest": 0.01,
+            "hold": 0.05,
+            "east": 0.47000000000000003
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.6,
+          "probabilities": {
+            "tackle": 0.02,
+            "shoot": 0.0,
+            "none": 0.68,
+            "pass": 0.07,
+            "defend": 0.23
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "south": 0.02,
+            "north": 0.03,
+            "southwest": 0.09,
+            "northeast": 0.13,
+            "west": 0.11,
+            "southeast": 0.11,
+            "northwest": 0.02,
+            "hold": 0.06,
+            "east": 0.43
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.61,
+          "probabilities": {
+            "tackle": 0.01,
+            "shoot": 0.0,
+            "none": 0.69,
+            "pass": 0.1,
+            "defend": 0.2
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.59,
+          "probabilities": {
+            "south": 0.01,
+            "southwest": 0.01,
+            "north": 0.02,
+            "northeast": 0.14,
+            "west": 0.03,
+            "hold": 0.04,
+            "northwest": 0.01,
+            "southeast": 0.11,
+            "east": 0.63
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.35,
+          "probabilities": {
+            "tackle": 0.01,
+            "shoot": 0.35,
+            "none": 0.16,
+            "pass": 0.47,
+            "defend": 0.01
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.51
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.22,
+          "probabilities": {
+            "south": 0.08,
+            "north": 0.02,
+            "southwest": 0.1,
+            "northeast": 0.24,
+            "west": 0.05,
+            "southeast": 0.17,
+            "northwest": 0.02,
+            "hold": 0.02,
+            "east": 0.3
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.43,
+          "probabilities": {
+            "tackle": 0.09,
+            "shoot": 0.01,
+            "none": 0.54,
+            "pass": 0.1,
+            "defend": 0.26
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.45
+        }
+      }
+    },
+    {
+      "index": 10,
+      "warmup": false,
+      "questions": 1,
+      "elapsed_ms": 108.47,
+      "request_bytes": 3813,
+      "response_bytes": 296,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2455,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.59,
+          "probabilities": {
+            "north": 0.02,
+            "northeast": 0.12,
+            "south": 0.02,
+            "southeast": 0.11,
+            "southwest": 0.01,
+            "west": 0.04,
+            "east": 0.62,
+            "northwest": 0.01,
+            "hold": 0.05
+          }
+        }
+      }
+    },
+    {
+      "index": 11,
+      "warmup": false,
+      "questions": 11,
+      "elapsed_ms": 142.72,
+      "request_bytes": 7944,
+      "response_bytes": 2441,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 4415,
+        "output_tokens": 997
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.9,
+          "probabilities": {
+            "west": 0.01,
+            "northeast": 0.01,
+            "north": 0.01,
+            "hold": 0.92,
+            "southwest": 0.0,
+            "northwest": 0.0,
+            "south": 0.01,
+            "east": 0.03,
+            "southeast": 0.01
+          }
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.33,
+          "probabilities": {
+            "west": 0.04,
+            "northeast": 0.06,
+            "southeast": 0.29,
+            "hold": 0.07,
+            "southwest": 0.03,
+            "northwest": 0.01,
+            "south": 0.08,
+            "east": 0.4,
+            "north": 0.02
+          }
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.39,
+          "probabilities": {
+            "west": 0.07,
+            "northeast": 0.12,
+            "north": 0.03,
+            "hold": 0.08,
+            "southwest": 0.04,
+            "south": 0.04,
+            "northwest": 0.01,
+            "east": 0.47000000000000003,
+            "southeast": 0.14
+          }
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "west": 0.05,
+            "northeast": 0.15,
+            "southeast": 0.18,
+            "hold": 0.06,
+            "southwest": 0.04,
+            "northwest": 0.01,
+            "south": 0.04,
+            "north": 0.03,
+            "east": 0.44
+          }
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "west": 0.07,
+            "northeast": 0.16,
+            "east": 0.45,
+            "hold": 0.07,
+            "southwest": 0.06,
+            "south": 0.02,
+            "northwest": 0.01,
+            "southeast": 0.13,
+            "north": 0.03
+          }
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "west": 0.05,
+            "northeast": 0.07,
+            "north": 0.01,
+            "hold": 0.05,
+            "southwest": 0.04,
+            "south": 0.06,
+            "northwest": 0.01,
+            "east": 0.48,
+            "southeast": 0.23
+          }
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.44,
+          "probabilities": {
+            "west": 0.08,
+            "northeast": 0.14,
+            "southeast": 0.13,
+            "hold": 0.06,
+            "southwest": 0.04,
+            "south": 0.02,
+            "northwest": 0.01,
+            "north": 0.02,
+            "east": 0.5
+          }
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.4,
+          "probabilities": {
+            "west": 0.07,
+            "northeast": 0.11,
+            "southeast": 0.19,
+            "hold": 0.05,
+            "southwest": 0.05,
+            "south": 0.03,
+            "northwest": 0.01,
+            "north": 0.02,
+            "east": 0.47
+          }
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "west": 0.09,
+            "northeast": 0.13,
+            "north": 0.02,
+            "hold": 0.05,
+            "southwest": 0.07,
+            "northwest": 0.02,
+            "south": 0.02,
+            "east": 0.44,
+            "southeast": 0.16
+          }
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.61,
+          "probabilities": {
+            "west": 0.03,
+            "northeast": 0.1,
+            "east": 0.65,
+            "hold": 0.05,
+            "southwest": 0.01,
+            "northwest": 0.01,
+            "south": 0.02,
+            "southeast": 0.11,
+            "north": 0.02
+          }
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "northeast",
+          "confidence": 0.19,
+          "probabilities": {
+            "west": 0.05,
+            "northeast": 0.27,
+            "east": 0.27,
+            "hold": 0.02,
+            "southwest": 0.08,
+            "northwest": 0.02,
+            "south": 0.11,
+            "north": 0.02,
+            "southeast": 0.16
+          }
+        }
+      }
+    },
+    {
+      "index": 12,
+      "warmup": false,
+      "questions": 33,
+      "elapsed_ms": 159.75,
+      "request_bytes": 12797,
+      "response_bytes": 4524,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5950,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.87,
+          "probabilities": {
+            "southeast": 0.01,
+            "east": 0.05,
+            "southwest": 0.0,
+            "hold": 0.9,
+            "north": 0.01,
+            "northwest": 0.0,
+            "west": 0.01,
+            "south": 0.01,
+            "northeast": 0.01
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "catch": 0.0,
+            "dive_south": 0.0,
+            "none": 1.0,
+            "dive_north": 0.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.31,
+          "probabilities": {
+            "southeast": 0.32,
+            "east": 0.39,
+            "southwest": 0.02,
+            "hold": 0.06,
+            "north": 0.02,
+            "northwest": 0.01,
+            "west": 0.03,
+            "south": 0.08,
+            "northeast": 0.07
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.7,
+          "probabilities": {
+            "tackle": 0.01,
+            "pass": 0.03,
+            "none": 0.76,
+            "shoot": 0.0,
+            "defend": 0.2
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "southeast": 0.15,
+            "east": 0.45,
+            "southwest": 0.04,
+            "hold": 0.08,
+            "south": 0.04,
+            "north": 0.03,
+            "west": 0.06,
+            "northwest": 0.01,
+            "northeast": 0.14
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.64,
+          "probabilities": {
+            "tackle": 0.03,
+            "pass": 0.1,
+            "none": 0.71,
+            "shoot": 0.0,
+            "defend": 0.16
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.26
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.34,
+          "probabilities": {
+            "southeast": 0.21,
+            "east": 0.41,
+            "southwest": 0.04,
+            "hold": 0.04,
+            "north": 0.02,
+            "south": 0.03,
+            "west": 0.06,
+            "northwest": 0.01,
+            "northeast": 0.18
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.61,
+          "probabilities": {
+            "tackle": 0.01,
+            "pass": 0.13,
+            "none": 0.69,
+            "defend": 0.17,
+            "shoot": 0.0
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.35,
+          "probabilities": {
+            "southeast": 0.14,
+            "east": 0.43,
+            "southwest": 0.05,
+            "hold": 0.09,
+            "northwest": 0.01,
+            "south": 0.02,
+            "west": 0.06,
+            "north": 0.03,
+            "northeast": 0.17
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.68,
+          "probabilities": {
+            "tackle": 0.01,
+            "pass": 0.05,
+            "none": 0.75,
+            "defend": 0.19,
+            "shoot": 0.0
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.45,
+          "probabilities": {
+            "southeast": 0.2,
+            "east": 0.51,
+            "southwest": 0.04,
+            "hold": 0.04,
+            "northwest": 0.01,
+            "south": 0.06,
+            "west": 0.06,
+            "north": 0.01,
+            "northeast": 0.07
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.66,
+          "probabilities": {
+            "tackle": 0.02,
+            "pass": 0.07,
+            "none": 0.73,
+            "defend": 0.18,
+            "shoot": 0.0
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.32
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.45,
+          "probabilities": {
+            "southeast": 0.11,
+            "east": 0.51,
+            "southwest": 0.04,
+            "hold": 0.07,
+            "south": 0.02,
+            "north": 0.02,
+            "west": 0.09,
+            "northwest": 0.01,
+            "northeast": 0.13
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.53,
+          "probabilities": {
+            "tackle": 0.06,
+            "pass": 0.04,
+            "none": 0.62,
+            "defend": 0.28,
+            "shoot": 0.0
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "southeast": 0.15,
+            "east": 0.43,
+            "southwest": 0.08,
+            "hold": 0.04,
+            "south": 0.03,
+            "north": 0.02,
+            "west": 0.1,
+            "northwest": 0.02,
+            "northeast": 0.13
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.57,
+          "probabilities": {
+            "tackle": 0.03,
+            "pass": 0.1,
+            "none": 0.66,
+            "defend": 0.21,
+            "shoot": 0.0
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.33,
+          "probabilities": {
+            "southeast": 0.11,
+            "east": 0.42,
+            "southwest": 0.09,
+            "hold": 0.05,
+            "northwest": 0.02,
+            "south": 0.02,
+            "west": 0.11,
+            "north": 0.02,
+            "northeast": 0.16
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.57,
+          "probabilities": {
+            "tackle": 0.02,
+            "pass": 0.06,
+            "none": 0.66,
+            "defend": 0.26,
+            "shoot": 0.0
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.52,
+          "probabilities": {
+            "southeast": 0.11,
+            "east": 0.58,
+            "southwest": 0.03,
+            "hold": 0.05,
+            "northwest": 0.01,
+            "north": 0.02,
+            "west": 0.05,
+            "south": 0.02,
+            "northeast": 0.13
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.39,
+          "probabilities": {
+            "tackle": 0.01,
+            "pass": 0.51,
+            "none": 0.15,
+            "defend": 0.01,
+            "shoot": 0.32
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.49
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.13,
+          "probabilities": {
+            "southeast": 0.15,
+            "east": 0.23,
+            "southwest": 0.13,
+            "hold": 0.03,
+            "north": 0.04,
+            "northwest": 0.02,
+            "west": 0.09,
+            "south": 0.13,
+            "northeast": 0.18
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.46,
+          "probabilities": {
+            "tackle": 0.07,
+            "pass": 0.12,
+            "none": 0.57,
+            "defend": 0.24,
+            "shoot": 0.0
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.42
+        }
+      }
+    },
+    {
+      "index": 13,
+      "warmup": false,
+      "questions": 1,
+      "elapsed_ms": 113.0,
+      "request_bytes": 3812,
+      "response_bytes": 295,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2454,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.61,
+          "probabilities": {
+            "west": 0.03,
+            "northeast": 0.1,
+            "east": 0.65,
+            "southeast": 0.11,
+            "north": 0.02,
+            "northwest": 0.01,
+            "hold": 0.05,
+            "south": 0.02,
+            "southwest": 0.01
+          }
+        }
+      }
+    },
+    {
+      "index": 14,
+      "warmup": false,
+      "questions": 11,
+      "elapsed_ms": 136.6,
+      "request_bytes": 7942,
+      "response_bytes": 2437,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 4413,
+        "output_tokens": 994
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.86,
+          "probabilities": {
+            "north": 0.01,
+            "northwest": 0.0,
+            "northeast": 0.01,
+            "west": 0.01,
+            "southwest": 0.0,
+            "southeast": 0.01,
+            "hold": 0.89,
+            "east": 0.060000000000000005,
+            "south": 0.01
+          }
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.32,
+          "probabilities": {
+            "north": 0.01,
+            "northwest": 0.01,
+            "northeast": 0.05,
+            "west": 0.03,
+            "southwest": 0.02,
+            "southeast": 0.34,
+            "hold": 0.07,
+            "east": 0.39,
+            "south": 0.07
+          }
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.39,
+          "probabilities": {
+            "north": 0.02,
+            "northwest": 0.02,
+            "northeast": 0.1,
+            "west": 0.08,
+            "southwest": 0.04,
+            "southeast": 0.16,
+            "hold": 0.08,
+            "east": 0.46,
+            "south": 0.04
+          }
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.35,
+          "probabilities": {
+            "north": 0.03,
+            "northwest": 0.01,
+            "northeast": 0.12,
+            "west": 0.08,
+            "southwest": 0.06,
+            "southeast": 0.19,
+            "hold": 0.05,
+            "east": 0.42,
+            "south": 0.04
+          }
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "north": 0.03,
+            "northwest": 0.01,
+            "northeast": 0.15,
+            "west": 0.06,
+            "southwest": 0.05,
+            "southeast": 0.11,
+            "hold": 0.09,
+            "east": 0.48,
+            "south": 0.02
+          }
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "north": 0.01,
+            "northeast": 0.05,
+            "northwest": 0.01,
+            "west": 0.07,
+            "southwest": 0.05,
+            "southeast": 0.21,
+            "hold": 0.06,
+            "east": 0.48,
+            "south": 0.06
+          }
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "north": 0.02,
+            "northeast": 0.13,
+            "northwest": 0.01,
+            "west": 0.09,
+            "southwest": 0.04,
+            "southeast": 0.14,
+            "hold": 0.06,
+            "east": 0.48,
+            "south": 0.03
+          }
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "north": 0.02,
+            "northwest": 0.01,
+            "northeast": 0.11,
+            "west": 0.1,
+            "southwest": 0.07,
+            "southeast": 0.17,
+            "hold": 0.05,
+            "east": 0.44,
+            "south": 0.03
+          }
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.34,
+          "probabilities": {
+            "north": 0.03,
+            "northwest": 0.02,
+            "northeast": 0.13,
+            "west": 0.1,
+            "southwest": 0.1,
+            "southeast": 0.12,
+            "hold": 0.06,
+            "east": 0.42,
+            "south": 0.02
+          }
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.49,
+          "probabilities": {
+            "north": 0.03,
+            "northwest": 0.01,
+            "northeast": 0.13,
+            "west": 0.05,
+            "southwest": 0.03,
+            "southeast": 0.12,
+            "hold": 0.05,
+            "east": 0.55,
+            "south": 0.02
+          }
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.18,
+          "probabilities": {
+            "north": 0.02,
+            "northwest": 0.02,
+            "northeast": 0.21,
+            "west": 0.07,
+            "southwest": 0.1,
+            "southeast": 0.21,
+            "hold": 0.02,
+            "east": 0.26,
+            "south": 0.09
+          }
+        }
+      }
+    },
+    {
+      "index": 15,
+      "warmup": false,
+      "questions": 1,
+      "elapsed_ms": 116.39,
+      "request_bytes": 3810,
+      "response_bytes": 294,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2452,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.63,
+          "probabilities": {
+            "hold": 0.04,
+            "north": 0.02,
+            "northeast": 0.11,
+            "west": 0.03,
+            "southeast": 0.1,
+            "southwest": 0.01,
+            "east": 0.68,
+            "south": 0.01,
+            "northwest": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 16,
+      "warmup": false,
+      "questions": 33,
+      "elapsed_ms": 212.63,
+      "request_bytes": 12796,
+      "response_bytes": 4521,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5949,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.89,
+          "probabilities": {
+            "west": 0.01,
+            "southeast": 0.01,
+            "southwest": 0.0,
+            "south": 0.01,
+            "north": 0.01,
+            "northeast": 0.01,
+            "hold": 0.9,
+            "east": 0.05,
+            "northwest": 0.0
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "dive_south": 0.0,
+            "dive_north": 0.0,
+            "catch": 0.0,
+            "none": 1.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.3,
+          "probabilities": {
+            "west": 0.05,
+            "southeast": 0.27,
+            "southwest": 0.03,
+            "south": 0.1,
+            "north": 0.02,
+            "northeast": 0.07,
+            "hold": 0.08,
+            "east": 0.37,
+            "northwest": 0.01
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.75,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.18,
+            "pass": 0.01,
+            "none": 0.8,
+            "tackle": 0.01
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "west": 0.06,
+            "southeast": 0.14,
+            "southwest": 0.03,
+            "south": 0.03,
+            "north": 0.03,
+            "northeast": 0.12,
+            "hold": 0.09,
+            "east": 0.49,
+            "northwest": 0.01
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.65,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.15,
+            "pass": 0.1,
+            "none": 0.72,
+            "tackle": 0.03
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.33,
+          "probabilities": {
+            "west": 0.06,
+            "south": 0.05,
+            "southwest": 0.05,
+            "southeast": 0.17,
+            "north": 0.03,
+            "northeast": 0.15,
+            "hold": 0.06,
+            "east": 0.42,
+            "northwest": 0.01
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.61,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.16,
+            "none": 0.69,
+            "pass": 0.14,
+            "tackle": 0.01
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.4,
+          "probabilities": {
+            "west": 0.07,
+            "south": 0.02,
+            "southwest": 0.06,
+            "southeast": 0.11,
+            "north": 0.03,
+            "northeast": 0.13,
+            "hold": 0.09,
+            "east": 0.47,
+            "northwest": 0.02
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.67,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.19,
+            "pass": 0.07,
+            "none": 0.73,
+            "tackle": 0.01
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "west": 0.06,
+            "south": 0.07,
+            "southwest": 0.04,
+            "southeast": 0.2,
+            "north": 0.01,
+            "northeast": 0.08,
+            "hold": 0.04,
+            "east": 0.49,
+            "northwest": 0.01
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.66,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.19,
+            "pass": 0.07,
+            "none": 0.73,
+            "tackle": 0.01
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.5,
+          "probabilities": {
+            "west": 0.07,
+            "south": 0.02,
+            "southwest": 0.03,
+            "southeast": 0.13,
+            "north": 0.02,
+            "northeast": 0.1,
+            "hold": 0.05,
+            "east": 0.56,
+            "northwest": 0.01
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.56,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.25,
+            "pass": 0.04,
+            "none": 0.64,
+            "tackle": 0.07
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.43,
+          "probabilities": {
+            "west": 0.07,
+            "southeast": 0.13,
+            "southwest": 0.08,
+            "south": 0.03,
+            "north": 0.02,
+            "northeast": 0.13,
+            "hold": 0.04,
+            "east": 0.49,
+            "northwest": 0.01
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.58,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.18,
+            "pass": 0.13,
+            "none": 0.66,
+            "tackle": 0.03
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "west": 0.06,
+            "southeast": 0.14,
+            "southwest": 0.05,
+            "south": 0.02,
+            "north": 0.02,
+            "northeast": 0.16,
+            "hold": 0.05,
+            "east": 0.48,
+            "northwest": 0.02
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.65,
+          "probabilities": {
+            "shoot": 0.0,
+            "defend": 0.2,
+            "none": 0.72,
+            "pass": 0.07,
+            "tackle": 0.01
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.55,
+          "probabilities": {
+            "west": 0.05,
+            "south": 0.02,
+            "southwest": 0.02,
+            "southeast": 0.14,
+            "north": 0.02,
+            "northeast": 0.09,
+            "hold": 0.05,
+            "east": 0.6,
+            "northwest": 0.01
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.3,
+          "probabilities": {
+            "shoot": 0.41,
+            "defend": 0.01,
+            "none": 0.13,
+            "pass": 0.44,
+            "tackle": 0.01
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.51
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.17,
+          "probabilities": {
+            "west": 0.08,
+            "southeast": 0.13,
+            "southwest": 0.13,
+            "south": 0.11,
+            "north": 0.04,
+            "northeast": 0.16,
+            "hold": 0.04,
+            "east": 0.27,
+            "northwest": 0.04
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.58,
+          "probabilities": {
+            "shoot": 0.01,
+            "defend": 0.18,
+            "none": 0.67,
+            "pass": 0.1,
+            "tackle": 0.04
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.43
+        }
+      }
+    },
+    {
+      "index": 17,
+      "warmup": false,
+      "questions": 1,
+      "elapsed_ms": 156.0,
+      "request_bytes": 3808,
+      "response_bytes": 296,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2450,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.57,
+          "probabilities": {
+            "south": 0.02,
+            "southwest": 0.01,
+            "northwest": 0.01,
+            "southeast": 0.12,
+            "hold": 0.06,
+            "northeast": 0.11,
+            "west": 0.04,
+            "north": 0.02,
+            "east": 0.61
+          }
+        }
+      }
+    },
+    {
+      "index": 18,
+      "warmup": false,
+      "questions": 11,
+      "elapsed_ms": 143.09,
+      "request_bytes": 7943,
+      "response_bytes": 2433,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 4414,
+        "output_tokens": 994
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.89,
+          "probabilities": {
+            "northeast": 0.01,
+            "west": 0.01,
+            "northwest": 0.0,
+            "southwest": 0.0,
+            "hold": 0.9,
+            "north": 0.02,
+            "east": 0.04,
+            "south": 0.01,
+            "southeast": 0.01
+          }
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.33,
+          "probabilities": {
+            "northeast": 0.05,
+            "west": 0.03,
+            "northwest": 0.01,
+            "southwest": 0.02,
+            "hold": 0.06,
+            "north": 0.01,
+            "east": 0.39,
+            "south": 0.07,
+            "southeast": 0.36
+          }
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "northeast": 0.12,
+            "west": 0.06,
+            "northwest": 0.01,
+            "southwest": 0.04,
+            "hold": 0.09,
+            "north": 0.03,
+            "east": 0.44,
+            "south": 0.04,
+            "southeast": 0.17
+          }
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "northeast": 0.14,
+            "west": 0.05,
+            "northwest": 0.01,
+            "southwest": 0.04,
+            "hold": 0.06,
+            "north": 0.03,
+            "east": 0.44,
+            "south": 0.03,
+            "southeast": 0.2
+          }
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.38,
+          "probabilities": {
+            "northeast": 0.14,
+            "west": 0.07,
+            "northwest": 0.02,
+            "southwest": 0.09,
+            "hold": 0.08,
+            "north": 0.03,
+            "east": 0.45,
+            "south": 0.02,
+            "southeast": 0.1
+          }
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "northeast": 0.07,
+            "west": 0.05,
+            "northwest": 0.01,
+            "southwest": 0.04,
+            "hold": 0.05,
+            "north": 0.01,
+            "east": 0.48,
+            "south": 0.06,
+            "southeast": 0.23
+          }
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "northeast": 0.13,
+            "west": 0.09,
+            "northwest": 0.02,
+            "southwest": 0.04,
+            "hold": 0.07,
+            "north": 0.03,
+            "east": 0.47,
+            "south": 0.03,
+            "southeast": 0.12
+          }
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.44,
+          "probabilities": {
+            "northeast": 0.1,
+            "west": 0.08,
+            "northwest": 0.01,
+            "southwest": 0.05,
+            "hold": 0.06,
+            "north": 0.02,
+            "east": 0.51,
+            "south": 0.02,
+            "southeast": 0.15
+          }
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.33,
+          "probabilities": {
+            "northeast": 0.15,
+            "west": 0.1,
+            "northwest": 0.02,
+            "southwest": 0.09,
+            "hold": 0.07,
+            "north": 0.03,
+            "east": 0.41000000000000003,
+            "south": 0.02,
+            "southeast": 0.11
+          }
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.61,
+          "probabilities": {
+            "northeast": 0.1,
+            "west": 0.03,
+            "northwest": 0.0,
+            "southwest": 0.01,
+            "hold": 0.04,
+            "north": 0.01,
+            "east": 0.66,
+            "south": 0.01,
+            "southeast": 0.14
+          }
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.24,
+          "probabilities": {
+            "northeast": 0.14,
+            "west": 0.09,
+            "northwest": 0.03,
+            "southwest": 0.11,
+            "hold": 0.03,
+            "north": 0.03,
+            "east": 0.33,
+            "south": 0.1,
+            "southeast": 0.14
+          }
+        }
+      }
+    },
+    {
+      "index": 19,
+      "warmup": false,
+      "questions": 33,
+      "elapsed_ms": 303.73,
+      "request_bytes": 12796,
+      "response_bytes": 4544,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5949,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.87,
+          "probabilities": {
+            "southwest": 0.0,
+            "northeast": 0.01,
+            "northwest": 0.0,
+            "west": 0.01,
+            "hold": 0.89,
+            "east": 0.06,
+            "north": 0.01,
+            "southeast": 0.01,
+            "south": 0.01
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "dive_north": 0.0,
+            "dive_south": 0.0,
+            "none": 1.0,
+            "catch": 0.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.31,
+          "probabilities": {
+            "southwest": 0.03,
+            "northwest": 0.01,
+            "northeast": 0.06,
+            "west": 0.03,
+            "hold": 0.05,
+            "east": 0.39,
+            "north": 0.01,
+            "south": 0.07,
+            "southeast": 0.35
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.69,
+          "probabilities": {
+            "pass": 0.04,
+            "defend": 0.21,
+            "none": 0.75,
+            "tackle": 0.0,
+            "shoot": 0.0
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "southwest": 0.03,
+            "northwest": 0.01,
+            "northeast": 0.14,
+            "west": 0.06,
+            "hold": 0.09,
+            "east": 0.47,
+            "north": 0.03,
+            "south": 0.03,
+            "southeast": 0.14
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.57,
+          "probabilities": {
+            "pass": 0.13,
+            "tackle": 0.02,
+            "none": 0.66,
+            "defend": 0.19,
+            "shoot": 0.0
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.32,
+          "probabilities": {
+            "southwest": 0.06,
+            "northeast": 0.13,
+            "northwest": 0.01,
+            "west": 0.05,
+            "hold": 0.06,
+            "east": 0.41000000000000003,
+            "north": 0.03,
+            "southeast": 0.21,
+            "south": 0.04
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.59,
+          "probabilities": {
+            "pass": 0.15,
+            "tackle": 0.01,
+            "none": 0.68,
+            "defend": 0.16,
+            "shoot": 0.0
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "southwest": 0.06,
+            "northwest": 0.01,
+            "northeast": 0.15,
+            "west": 0.07,
+            "hold": 0.08,
+            "east": 0.48,
+            "north": 0.03,
+            "south": 0.02,
+            "southeast": 0.1
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.7,
+          "probabilities": {
+            "pass": 0.1,
+            "defend": 0.13,
+            "none": 0.76,
+            "tackle": 0.01,
+            "shoot": 0.0
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.39,
+          "probabilities": {
+            "southwest": 0.05,
+            "northwest": 0.01,
+            "northeast": 0.06,
+            "west": 0.06,
+            "hold": 0.04,
+            "south": 0.07,
+            "north": 0.01,
+            "southeast": 0.25,
+            "east": 0.45
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.58,
+          "probabilities": {
+            "pass": 0.12,
+            "defend": 0.21,
+            "none": 0.66,
+            "tackle": 0.01,
+            "shoot": 0.0
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.48,
+          "probabilities": {
+            "southwest": 0.03,
+            "northwest": 0.01,
+            "northeast": 0.14,
+            "west": 0.07,
+            "hold": 0.04,
+            "south": 0.02,
+            "north": 0.02,
+            "southeast": 0.13,
+            "east": 0.54
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.54,
+          "probabilities": {
+            "pass": 0.11,
+            "tackle": 0.04,
+            "none": 0.63,
+            "defend": 0.22,
+            "shoot": 0.0
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "southwest": 0.06,
+            "northeast": 0.12,
+            "northwest": 0.01,
+            "west": 0.06,
+            "hold": 0.05,
+            "south": 0.02,
+            "north": 0.02,
+            "east": 0.49,
+            "southeast": 0.17
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.51,
+          "probabilities": {
+            "pass": 0.1,
+            "tackle": 0.02,
+            "none": 0.61,
+            "defend": 0.27,
+            "shoot": 0.0
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.29,
+          "probabilities": {
+            "southwest": 0.12,
+            "northwest": 0.02,
+            "northeast": 0.13,
+            "west": 0.12,
+            "hold": 0.06,
+            "east": 0.37,
+            "north": 0.02,
+            "southeast": 0.14,
+            "south": 0.02
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.59,
+          "probabilities": {
+            "pass": 0.13,
+            "tackle": 0.01,
+            "none": 0.67,
+            "defend": 0.19,
+            "shoot": 0.0
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.59,
+          "probabilities": {
+            "southwest": 0.02,
+            "northwest": 0.01,
+            "northeast": 0.1,
+            "west": 0.04,
+            "hold": 0.06,
+            "east": 0.62,
+            "north": 0.02,
+            "south": 0.02,
+            "southeast": 0.11
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.38,
+          "probabilities": {
+            "pass": 0.49,
+            "tackle": 0.01,
+            "none": 0.16,
+            "defend": 0.01,
+            "shoot": 0.33
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.49
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.16,
+          "probabilities": {
+            "southwest": 0.15,
+            "northeast": 0.13,
+            "northwest": 0.05,
+            "west": 0.14,
+            "hold": 0.03,
+            "south": 0.11,
+            "north": 0.03,
+            "east": 0.24,
+            "southeast": 0.12
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.44,
+          "probabilities": {
+            "pass": 0.14,
+            "tackle": 0.08,
+            "none": 0.55,
+            "defend": 0.22,
+            "shoot": 0.01
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.46
+        }
+      }
+    },
+    {
+      "index": 20,
+      "warmup": false,
+      "questions": 11,
+      "elapsed_ms": 183.49,
+      "request_bytes": 7944,
+      "response_bytes": 2435,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 4415,
+        "output_tokens": 994
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.89,
+          "probabilities": {
+            "hold": 0.91,
+            "northeast": 0.01,
+            "north": 0.01,
+            "northwest": 0.0,
+            "west": 0.01,
+            "southwest": 0.0,
+            "east": 0.05,
+            "south": 0.01,
+            "southeast": 0.0
+          }
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.32,
+          "probabilities": {
+            "hold": 0.07,
+            "northeast": 0.06,
+            "west": 0.05,
+            "north": 0.02,
+            "southwest": 0.03,
+            "southeast": 0.29,
+            "east": 0.39,
+            "south": 0.08,
+            "northwest": 0.01
+          }
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.4,
+          "probabilities": {
+            "hold": 0.1,
+            "northeast": 0.11,
+            "west": 0.08,
+            "southwest": 0.04,
+            "north": 0.03,
+            "northwest": 0.01,
+            "east": 0.46,
+            "south": 0.03,
+            "southeast": 0.14
+          }
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "hold": 0.05,
+            "northeast": 0.12,
+            "west": 0.08,
+            "southwest": 0.06,
+            "southeast": 0.19,
+            "northwest": 0.01,
+            "east": 0.44,
+            "south": 0.03,
+            "north": 0.02
+          }
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.39,
+          "probabilities": {
+            "hold": 0.08,
+            "west": 0.06,
+            "southwest": 0.05,
+            "north": 0.03,
+            "southeast": 0.13,
+            "northeast": 0.15,
+            "east": 0.47000000000000003,
+            "south": 0.02,
+            "northwest": 0.01
+          }
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "hold": 0.04,
+            "west": 0.06,
+            "southwest": 0.04,
+            "southeast": 0.21,
+            "north": 0.01,
+            "northeast": 0.07,
+            "east": 0.5,
+            "south": 0.06,
+            "northwest": 0.01
+          }
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.43,
+          "probabilities": {
+            "hold": 0.06,
+            "northeast": 0.1,
+            "southwest": 0.04,
+            "northwest": 0.02,
+            "north": 0.02,
+            "west": 0.09,
+            "east": 0.49,
+            "south": 0.02,
+            "southeast": 0.16
+          }
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.35,
+          "probabilities": {
+            "hold": 0.05,
+            "west": 0.1,
+            "southwest": 0.07,
+            "north": 0.02,
+            "northwest": 0.02,
+            "northeast": 0.14,
+            "east": 0.42,
+            "south": 0.03,
+            "southeast": 0.15
+          }
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "hold": 0.05,
+            "northeast": 0.16,
+            "west": 0.08,
+            "southwest": 0.08,
+            "southeast": 0.12,
+            "north": 0.02,
+            "east": 0.45,
+            "south": 0.02,
+            "northwest": 0.02
+          }
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.56,
+          "probabilities": {
+            "hold": 0.06,
+            "southwest": 0.01,
+            "northeast": 0.11,
+            "west": 0.04,
+            "northwest": 0.01,
+            "north": 0.01,
+            "east": 0.61,
+            "south": 0.01,
+            "southeast": 0.14
+          }
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.17,
+          "probabilities": {
+            "hold": 0.03,
+            "west": 0.11,
+            "northwest": 0.04,
+            "southeast": 0.14,
+            "northeast": 0.17,
+            "southwest": 0.14,
+            "east": 0.26,
+            "south": 0.08,
+            "north": 0.03
+          }
+        }
+      }
+    },
+    {
+      "index": 21,
+      "warmup": false,
+      "questions": 33,
+      "elapsed_ms": 113.53,
+      "request_bytes": 12797,
+      "response_bytes": 4522,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5950,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.89,
+          "probabilities": {
+            "northeast": 0.01,
+            "north": 0.01,
+            "west": 0.01,
+            "northwest": 0.0,
+            "south": 0.01,
+            "southwest": 0.0,
+            "southeast": 0.01,
+            "hold": 0.91,
+            "east": 0.04
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "none": 1.0,
+            "catch": 0.0,
+            "dive_south": 0.0,
+            "dive_north": 0.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.34,
+          "probabilities": {
+            "northeast": 0.07,
+            "north": 0.02,
+            "west": 0.03,
+            "northwest": 0.01,
+            "south": 0.09,
+            "southwest": 0.02,
+            "southeast": 0.29,
+            "hold": 0.06,
+            "east": 0.41
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.76,
+          "probabilities": {
+            "pass": 0.03,
+            "defend": 0.16,
+            "shoot": 0.0,
+            "tackle": 0.0,
+            "none": 0.81
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.35,
+          "probabilities": {
+            "northeast": 0.13,
+            "north": 0.04,
+            "west": 0.07,
+            "northwest": 0.01,
+            "south": 0.04,
+            "southwest": 0.04,
+            "southeast": 0.15,
+            "hold": 0.1,
+            "east": 0.42
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.67,
+          "probabilities": {
+            "pass": 0.07,
+            "defend": 0.17,
+            "shoot": 0.0,
+            "tackle": 0.02,
+            "none": 0.74
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "northeast": 0.13,
+            "north": 0.03,
+            "west": 0.05,
+            "southwest": 0.04,
+            "south": 0.04,
+            "northwest": 0.01,
+            "southeast": 0.2,
+            "hold": 0.06,
+            "east": 0.44
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.62,
+          "probabilities": {
+            "pass": 0.13,
+            "defend": 0.16,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "none": 0.7
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.4,
+          "probabilities": {
+            "northeast": 0.13,
+            "north": 0.02,
+            "west": 0.05,
+            "northwest": 0.01,
+            "south": 0.03,
+            "southwest": 0.04,
+            "southeast": 0.17,
+            "hold": 0.07,
+            "east": 0.48
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.68,
+          "probabilities": {
+            "pass": 0.09,
+            "defend": 0.15,
+            "shoot": 0.01,
+            "tackle": 0.01,
+            "none": 0.74
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.27
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "northeast": 0.07,
+            "north": 0.01,
+            "west": 0.06,
+            "northwest": 0.01,
+            "south": 0.08,
+            "southwest": 0.04,
+            "southeast": 0.24,
+            "hold": 0.05,
+            "east": 0.44
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.7,
+          "probabilities": {
+            "pass": 0.07,
+            "defend": 0.16,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "none": 0.76
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.32
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.38,
+          "probabilities": {
+            "northeast": 0.13,
+            "north": 0.03,
+            "west": 0.09,
+            "southwest": 0.06,
+            "south": 0.04,
+            "northwest": 0.01,
+            "southeast": 0.13,
+            "hold": 0.06,
+            "east": 0.45
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.51,
+          "probabilities": {
+            "pass": 0.12,
+            "defend": 0.23,
+            "shoot": 0.0,
+            "tackle": 0.04,
+            "none": 0.61
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.44,
+          "probabilities": {
+            "northeast": 0.1,
+            "north": 0.02,
+            "west": 0.06,
+            "southwest": 0.04,
+            "south": 0.03,
+            "northwest": 0.01,
+            "southeast": 0.17,
+            "hold": 0.06,
+            "east": 0.51
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.6,
+          "probabilities": {
+            "pass": 0.05,
+            "defend": 0.24,
+            "shoot": 0.0,
+            "tackle": 0.03,
+            "none": 0.68
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "northeast": 0.16,
+            "north": 0.03,
+            "west": 0.06,
+            "northwest": 0.02,
+            "south": 0.02,
+            "southwest": 0.06,
+            "southeast": 0.13,
+            "hold": 0.05,
+            "east": 0.47
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.6,
+          "probabilities": {
+            "pass": 0.06,
+            "defend": 0.25,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "none": 0.68
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.29
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.54,
+          "probabilities": {
+            "northeast": 0.13,
+            "north": 0.02,
+            "west": 0.03,
+            "southwest": 0.01,
+            "south": 0.02,
+            "northwest": 0.01,
+            "southeast": 0.15,
+            "hold": 0.04,
+            "east": 0.59
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.3,
+          "probabilities": {
+            "pass": 0.45,
+            "defend": 0.01,
+            "shoot": 0.4,
+            "tackle": 0.0,
+            "none": 0.14
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.54
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.22,
+          "probabilities": {
+            "northeast": 0.22,
+            "north": 0.03,
+            "west": 0.05,
+            "southwest": 0.05,
+            "south": 0.11,
+            "northwest": 0.01,
+            "southeast": 0.19,
+            "hold": 0.02,
+            "east": 0.32
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.48,
+          "probabilities": {
+            "pass": 0.15,
+            "defend": 0.2,
+            "shoot": 0.01,
+            "tackle": 0.06,
+            "none": 0.58
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.47
+        }
+      }
+    },
+    {
+      "index": 22,
+      "warmup": false,
+      "questions": 1,
+      "elapsed_ms": 122.13,
+      "request_bytes": 3809,
+      "response_bytes": 296,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2451,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.62,
+          "probabilities": {
+            "southwest": 0.01,
+            "east": 0.66,
+            "south": 0.01,
+            "north": 0.01,
+            "northwest": 0.01,
+            "southeast": 0.14,
+            "hold": 0.04,
+            "northeast": 0.09,
+            "west": 0.03
+          }
+        }
+      }
+    },
+    {
+      "index": 23,
+      "warmup": false,
+      "questions": 11,
+      "elapsed_ms": 138.64,
+      "request_bytes": 7944,
+      "response_bytes": 2419,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 4415,
+        "output_tokens": 994
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.88,
+          "probabilities": {
+            "north": 0.01,
+            "northeast": 0.01,
+            "south": 0.01,
+            "southeast": 0.01,
+            "southwest": 0.0,
+            "west": 0.01,
+            "east": 0.06,
+            "northwest": 0.0,
+            "hold": 0.89
+          }
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.31,
+          "probabilities": {
+            "south": 0.09,
+            "northeast": 0.09,
+            "north": 0.01,
+            "southeast": 0.29,
+            "southwest": 0.02,
+            "west": 0.04,
+            "east": 0.39,
+            "northwest": 0.01,
+            "hold": 0.06
+          }
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.4,
+          "probabilities": {
+            "south": 0.03,
+            "northeast": 0.13,
+            "north": 0.04,
+            "southeast": 0.12,
+            "southwest": 0.03,
+            "west": 0.08,
+            "east": 0.47,
+            "northwest": 0.01,
+            "hold": 0.09
+          }
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.34,
+          "probabilities": {
+            "south": 0.04,
+            "northeast": 0.15,
+            "north": 0.03,
+            "southeast": 0.18,
+            "southwest": 0.05,
+            "west": 0.07,
+            "east": 0.42,
+            "northwest": 0.01,
+            "hold": 0.05
+          }
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.36,
+          "probabilities": {
+            "south": 0.02,
+            "northeast": 0.16,
+            "north": 0.03,
+            "southeast": 0.12,
+            "southwest": 0.09,
+            "west": 0.07,
+            "east": 0.43,
+            "hold": 0.06,
+            "northwest": 0.02
+          }
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.44,
+          "probabilities": {
+            "north": 0.01,
+            "northeast": 0.08,
+            "south": 0.06,
+            "southeast": 0.19,
+            "southwest": 0.05,
+            "west": 0.06,
+            "east": 0.5,
+            "northwest": 0.01,
+            "hold": 0.04
+          }
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.46,
+          "probabilities": {
+            "south": 0.03,
+            "northeast": 0.11,
+            "north": 0.02,
+            "southeast": 0.13,
+            "southwest": 0.03,
+            "west": 0.08,
+            "east": 0.52,
+            "northwest": 0.01,
+            "hold": 0.07
+          }
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.44,
+          "probabilities": {
+            "north": 0.02,
+            "northeast": 0.13,
+            "south": 0.03,
+            "southeast": 0.15,
+            "southwest": 0.05,
+            "west": 0.07,
+            "east": 0.5,
+            "hold": 0.04,
+            "northwest": 0.01
+          }
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.37,
+          "probabilities": {
+            "south": 0.02,
+            "northeast": 0.16,
+            "north": 0.02,
+            "southeast": 0.11,
+            "southwest": 0.1,
+            "west": 0.09,
+            "east": 0.44,
+            "northwest": 0.02,
+            "hold": 0.04
+          }
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.57,
+          "probabilities": {
+            "north": 0.01,
+            "northeast": 0.1,
+            "south": 0.02,
+            "southeast": 0.1,
+            "southwest": 0.02,
+            "west": 0.05,
+            "east": 0.63,
+            "northwest": 0.01,
+            "hold": 0.06
+          }
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.28,
+          "probabilities": {
+            "south": 0.07,
+            "northeast": 0.2,
+            "north": 0.03,
+            "southeast": 0.16,
+            "southwest": 0.08,
+            "west": 0.07,
+            "east": 0.35,
+            "northwest": 0.02,
+            "hold": 0.02
+          }
+        }
+      }
+    },
+    {
+      "index": 24,
+      "warmup": false,
+      "questions": 33,
+      "elapsed_ms": 132.11,
+      "request_bytes": 12797,
+      "response_bytes": 4532,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 5950,
+        "output_tokens": 1818
+      },
+      "answers": {
+        "jev_0_move": {
+          "type": "choice",
+          "choice": "hold",
+          "confidence": 0.87,
+          "probabilities": {
+            "east": 0.05,
+            "southwest": 0.0,
+            "south": 0.01,
+            "north": 0.02,
+            "northwest": 0.0,
+            "west": 0.01,
+            "northeast": 0.02,
+            "hold": 0.88,
+            "southeast": 0.01
+          }
+        },
+        "jev_0_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 1.0,
+          "probabilities": {
+            "none": 1.0,
+            "catch": 0.0,
+            "dive_north": 0.0,
+            "dive_south": 0.0
+          }
+        },
+        "jev_0_sprint": {
+          "type": "noul",
+          "noul": 0.09
+        },
+        "jev_1_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.32,
+          "probabilities": {
+            "east": 0.39,
+            "southwest": 0.04,
+            "south": 0.08,
+            "north": 0.02,
+            "northwest": 0.01,
+            "west": 0.04,
+            "northeast": 0.06,
+            "hold": 0.05,
+            "southeast": 0.31
+          }
+        },
+        "jev_1_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.73,
+          "probabilities": {
+            "tackle": 0.01,
+            "shoot": 0.0,
+            "none": 0.79,
+            "defend": 0.18,
+            "pass": 0.02
+          }
+        },
+        "jev_1_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_2_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.41,
+          "probabilities": {
+            "east": 0.48,
+            "hold": 0.07,
+            "south": 0.04,
+            "northwest": 0.01,
+            "north": 0.02,
+            "west": 0.08,
+            "northeast": 0.13,
+            "southeast": 0.13,
+            "southwest": 0.04
+          }
+        },
+        "jev_2_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.62,
+          "probabilities": {
+            "pass": 0.11,
+            "defend": 0.17,
+            "tackle": 0.02,
+            "shoot": 0.0,
+            "none": 0.7
+          }
+        },
+        "jev_2_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_3_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.33,
+          "probabilities": {
+            "east": 0.39999999999999997,
+            "southeast": 0.19,
+            "south": 0.04,
+            "north": 0.03,
+            "northwest": 0.02,
+            "west": 0.07,
+            "northeast": 0.14,
+            "hold": 0.05,
+            "southwest": 0.06
+          }
+        },
+        "jev_3_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.63,
+          "probabilities": {
+            "none": 0.7,
+            "shoot": 0.0,
+            "defend": 0.15,
+            "pass": 0.14,
+            "tackle": 0.01
+          }
+        },
+        "jev_3_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_4_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.35,
+          "probabilities": {
+            "east": 0.42,
+            "hold": 0.07,
+            "south": 0.02,
+            "north": 0.03,
+            "northwest": 0.02,
+            "west": 0.07,
+            "northeast": 0.18,
+            "southwest": 0.07,
+            "southeast": 0.12
+          }
+        },
+        "jev_4_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.69,
+          "probabilities": {
+            "tackle": 0.01,
+            "shoot": 0.0,
+            "none": 0.76,
+            "defend": 0.17,
+            "pass": 0.06
+          }
+        },
+        "jev_4_sprint": {
+          "type": "noul",
+          "noul": 0.28
+        },
+        "jev_5_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "east": 0.49,
+            "southwest": 0.04,
+            "south": 0.07,
+            "north": 0.01,
+            "northwest": 0.01,
+            "west": 0.07,
+            "northeast": 0.07,
+            "southeast": 0.2,
+            "hold": 0.04
+          }
+        },
+        "jev_5_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.63,
+          "probabilities": {
+            "none": 0.7,
+            "shoot": 0.0,
+            "defend": 0.21,
+            "pass": 0.08,
+            "tackle": 0.01
+          }
+        },
+        "jev_5_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_6_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.47,
+          "probabilities": {
+            "east": 0.53,
+            "southwest": 0.03,
+            "south": 0.02,
+            "north": 0.02,
+            "northwest": 0.01,
+            "west": 0.07,
+            "northeast": 0.13,
+            "hold": 0.06,
+            "southeast": 0.13
+          }
+        },
+        "jev_6_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.53,
+          "probabilities": {
+            "none": 0.63,
+            "defend": 0.26,
+            "pass": 0.06,
+            "tackle": 0.05,
+            "shoot": 0.0
+          }
+        },
+        "jev_6_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_7_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.42,
+          "probabilities": {
+            "east": 0.48,
+            "southeast": 0.18,
+            "south": 0.02,
+            "north": 0.02,
+            "northwest": 0.01,
+            "west": 0.08,
+            "northeast": 0.11,
+            "southwest": 0.06,
+            "hold": 0.04
+          }
+        },
+        "jev_7_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.57,
+          "probabilities": {
+            "pass": 0.11,
+            "defend": 0.21,
+            "tackle": 0.02,
+            "shoot": 0.0,
+            "none": 0.66
+          }
+        },
+        "jev_7_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_8_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.39,
+          "probabilities": {
+            "east": 0.45,
+            "southwest": 0.07,
+            "south": 0.02,
+            "northwest": 0.03,
+            "north": 0.03,
+            "west": 0.11,
+            "northeast": 0.14,
+            "southeast": 0.1,
+            "hold": 0.05
+          }
+        },
+        "jev_8_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.6,
+          "probabilities": {
+            "pass": 0.1,
+            "shoot": 0.0,
+            "tackle": 0.01,
+            "none": 0.68,
+            "defend": 0.2
+          }
+        },
+        "jev_8_sprint": {
+          "type": "noul",
+          "noul": 0.3
+        },
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.48,
+          "probabilities": {
+            "east": 0.55,
+            "southeast": 0.11,
+            "south": 0.02,
+            "northwest": 0.01,
+            "north": 0.02,
+            "west": 0.05,
+            "northeast": 0.14,
+            "southwest": 0.02,
+            "hold": 0.07
+          }
+        },
+        "jev_9_action": {
+          "type": "choice",
+          "choice": "pass",
+          "confidence": 0.4,
+          "probabilities": {
+            "none": 0.15,
+            "shoot": 0.32,
+            "defend": 0.01,
+            "pass": 0.51,
+            "tackle": 0.01
+          }
+        },
+        "jev_9_sprint": {
+          "type": "noul",
+          "noul": 0.47
+        },
+        "jev_10_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.2,
+          "probabilities": {
+            "east": 0.3,
+            "southeast": 0.14,
+            "south": 0.08,
+            "northwest": 0.03,
+            "north": 0.04,
+            "west": 0.1,
+            "northeast": 0.15,
+            "hold": 0.04,
+            "southwest": 0.12
+          }
+        },
+        "jev_10_action": {
+          "type": "choice",
+          "choice": "none",
+          "confidence": 0.5,
+          "probabilities": {
+            "none": 0.59,
+            "defend": 0.19,
+            "pass": 0.15,
+            "tackle": 0.06,
+            "shoot": 0.01
+          }
+        },
+        "jev_10_sprint": {
+          "type": "noul",
+          "noul": 0.41
+        }
+      }
+    },
+    {
+      "index": 25,
+      "warmup": false,
+      "questions": 1,
+      "elapsed_ms": 131.83,
+      "request_bytes": 3814,
+      "response_bytes": 296,
+      "model": "jev-1.13.0",
+      "valid_shape": true,
+      "usage": {
+        "input_tokens": 2456,
+        "output_tokens": 93
+      },
+      "answers": {
+        "jev_9_move": {
+          "type": "choice",
+          "choice": "east",
+          "confidence": 0.56,
+          "probabilities": {
+            "southwest": 0.01,
+            "northeast": 0.13,
+            "northwest": 0.01,
+            "west": 0.04,
+            "hold": 0.06,
+            "south": 0.02,
+            "north": 0.02,
+            "east": 0.62,
+            "southeast": 0.09
+          }
+        }
+      }
+    }
+  ],
+  "example_request_without_credentials": {
+    "model": "jev-1.13.0",
+    "state": {
+      "state_id": 0,
+      "time_s": 10.0,
+      "units": "metres, seconds",
+      "pitch": [
+        105,
+        68
+      ],
+      "jev_attacks": "+x",
+      "human_attacks": "-x",
+      "score": [
+        0,
+        0
+      ],
+      "phase": "open_play",
+      "ball": {
+        "position": [
+          73.17,
+          25,
+          0.11
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "owner": "jev_9"
+      },
+      "rules": "Choose actions for the next 100ms. Only the ball owner can pass or shoot. Tackle only within 1.5m of an opponent with the ball. Players can move and act together. Keep team spacing and defend your own goal.",
+      "players": [
+        {
+          "id": "jev_0",
+          "team": "jev",
+          "role": "goalkeeper",
+          "position": [
+            5.69,
+            34
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_1",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            25.52,
+            10
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_2",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            24.84,
+            26
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_3",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            24.52,
+            42
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_4",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            25.02,
+            58
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_5",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            47.81,
+            10
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_6",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            48.57,
+            26
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_7",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            47.61,
+            42
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_8",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            47.95,
+            58
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_9",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            73.17,
+            25
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "jev_10",
+          "team": "jev",
+          "role": "outfield",
+          "position": [
+            73.82,
+            43
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_0",
+          "team": "human",
+          "role": "goalkeeper",
+          "position": [
+            100.01,
+            34
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_1",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            79.56,
+            10
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_2",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            80.51,
+            26
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_3",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            80.24,
+            42
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_4",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            79.5,
+            58
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_5",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            57.82,
+            10
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_6",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            57.97,
+            26
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_7",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            57.62,
+            42
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_8",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            57.8,
+            58
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_9",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            31.62,
+            25
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        },
+        {
+          "id": "human_10",
+          "team": "human",
+          "role": "outfield",
+          "position": [
+            32.46,
+            43
+          ],
+          "velocity": [
+            0,
+            0
+          ],
+          "stamina": 0.9,
+          "action": "idle",
+          "cooldown_s": 0
+        }
+      ]
+    },
+    "questions": {
+      "jev_0_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_0 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_0_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_0 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "dive_north": "Dive towards -y to save the ball",
+          "dive_south": "Dive towards +y to save the ball",
+          "catch": "Catch a reachable incoming ball"
+        }
+      },
+      "jev_0_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_0 sprint now, considering position and stamina?"
+      },
+      "jev_1_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_1 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_1_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_1 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_1_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_1 sprint now, considering position and stamina?"
+      },
+      "jev_2_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_2 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_2_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_2 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_2_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_2 sprint now, considering position and stamina?"
+      },
+      "jev_3_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_3 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_3_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_3 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_3_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_3 sprint now, considering position and stamina?"
+      },
+      "jev_4_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_4 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_4_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_4 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_4_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_4 sprint now, considering position and stamina?"
+      },
+      "jev_5_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_5 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_5_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_5 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_5_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_5 sprint now, considering position and stamina?"
+      },
+      "jev_6_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_6 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_6_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_6 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_6_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_6 sprint now, considering position and stamina?"
+      },
+      "jev_7_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_7 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_7_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_7 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_7_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_7 sprint now, considering position and stamina?"
+      },
+      "jev_8_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_8 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_8_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_8 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_8_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_8 sprint now, considering position and stamina?"
+      },
+      "jev_9_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_9 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_9_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_9 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_9_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_9 sprint now, considering position and stamina?"
+      },
+      "jev_10_move": {
+        "type": "choice",
+        "instructions": "Which movement direction should player jev_10 use now to help the Jev team? Consider this player's role and the other players' current positions.",
+        "criteria": {
+          "hold": "Do not move",
+          "east": "Move +x",
+          "west": "Move -x",
+          "north": "Move -y",
+          "south": "Move +y",
+          "northeast": "Move +x and -y",
+          "northwest": "Move -x and -y",
+          "southeast": "Move +x and +y",
+          "southwest": "Move -x and +y"
+        }
+      },
+      "jev_10_action": {
+        "type": "choice",
+        "instructions": "Which legal special action should player jev_10 take now? Select none if no special action helps.",
+        "criteria": {
+          "none": "No special action",
+          "pass": "Pass to a teammate",
+          "shoot": "Shoot at the opposing goal",
+          "tackle": "Tackle a nearby ball carrier",
+          "defend": "Take a defensive stance"
+        }
+      },
+      "jev_10_sprint": {
+        "type": "noul",
+        "instructions": "Should player jev_10 sprint now, considering position and stamina?"
+      }
+    }
+  }
+}

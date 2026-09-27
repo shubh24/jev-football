@@ -1,0 +1,18 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Installed packages and generated output
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+game/artifacts/*
+!game/artifacts/.gitkeep
+
+# Restore licensed game audio with the downloader; do not distribute source MP3s.
+game/src/match/sounds/*.mp3

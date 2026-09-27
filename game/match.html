@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Argentina vs Spain — ELEVEN</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/match.css"><script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script></head>
+<body>
+<canvas id="pitch" aria-label="Football pitch"></canvas><div class="shade"></div>
+<header><a class="brand" href="/">/// ELEVEN <span>TEAM PLAY</span></a><div class="scoreboard"><span class="human">ARGENTINA <small>YOU · SKY BLUE / WHITE</small></span><b id="human-score">0</b><span class="score-dash">—</span><b id="jev-score">0</b><span class="ai">SPAIN <small>JEV · RED</small></span><time id="clock">00:00</time><small id="half">1ST HALF</small></div><button id="pause">Pause</button></header>
+<div class="camera-tools"><label>CAMERA <select id="camera"><option value="broadcast">Broadcast · side-on</option><option value="wide">Co-op · wide side-on</option><option value="end">End-to-end</option></select></label><label>ZOOM <input id="camera-zoom" type="range" min="0.8" max="1.3" step="0.05" value="1"></label><span id="attack-direction">YOU ATTACK →</span></div>
+<details class="sound-tools"><summary>STADIUM SOUND <span id="sound-status">Starts at kick-off</span></summary><div class="sound-settings"><label><input id="sound-enabled" type="checkbox" checked> Match sounds</label><label>Volume <input id="sound-volume" type="range" min="0" max="1" step="0.05" value="0.65"></label><label><input id="sound-commentary" type="checkbox" checked> English commentary · device voice</label><p id="sound-caption" aria-live="polite">Crowd reacts to the match</p></div></details>
+<aside class="team-panel">
+  <div class="panel-heading"><span>BOTH TEAMS · LIVE DECISIONS</span><span id="connection">CONNECTING</span></div>
+  <h1>JEV’s <em>next action.</em></h1>
+  <label class="mode-label">Control mode <select id="mode"><option value="live">JEV · Live</option><option value="practice">Practice · Local rules</option></select></label>
+  <div class="section-title">SPAIN · JEV STRATEGY <span>4–4–2</span></div>
+  <div id="strategy-buttons" class="strategy-buttons"><button data-strategy="possession" aria-pressed="true">Possession</button><button data-strategy="attack" aria-pressed="false">Attack</button><button data-strategy="defend" aria-pressed="false">Defend</button></div>
+  <p id="strategy-copy"></p>
+  <label class="human-plan">Argentina <select id="human-strategy"><option value="possession">Possession</option><option value="attack">Attack</option><option value="defend">Defend</option></select></label>
+  <p class="note" id="support-status">You control the selected player. JEV controls your nine other outfield players.</p><details class="squad-list"><summary>Argentina · Your 11 players</summary><div id="human-roster"></div></details>
+  <div class="section-title">BOTH GOALKEEPERS <span>SEPARATE CONTROL</span></div>
+  <p class="keeper-status" id="keeper-h1"></p><p class="keeper-status" id="keeper-j1"></p>
+  <details id="keeper-panel"><summary>Goalkeeper actions and probabilities</summary><label class="history-picker">Keeper <select id="keeper-player"><option value="h1">Argentina · E. Martínez</option><option value="j1">Spain · Unai Simón</option></select></label><label class="history-picker">Response <select id="keeper-sample"><option value="latest">Latest response</option></select></label><div id="keeper-inspection"></div><p class="note">−x and +x are pitch directions. They do not change with the camera.</p></details>
+  <label class="history-picker">Inspect team <select id="decision-team"><option value="1">Spain · Opponent</option><option value="0">Argentina · Your teammates</option></select></label>
+  <div class="section-title">TEAM DECISIONS <span id="response-time">— ms</span></div>
+  <p class="note" id="model-note">JEV selects actions and their movement and kick controls.</p>
+  <div class="decision-timing"><span id="decision-cadence">Next call starts on reply</span><span id="response-age">No response yet</span></div>
+  <label class="follow-decision"><input id="follow-decision" type="checkbox" checked> Follow the ball action</label>
+  <div id="active-command" class="active-command">Waiting for kick-off.</div>
+  <details id="inspection" open><summary>Action choices and probabilities</summary><label class="history-picker">Response <select id="decision-sample"><option value="latest">Latest response</option></select></label><div id="decision-inspection">Select a player below.</div></details>
+  <div class="section-title">10 OUTFIELD PLAYERS <span>SELECT TO INSPECT</span></div>
+  <div id="player-decisions" class="player-decisions"></div>
+  <div class="panel-footer"><span id="request-count">0 responses</span><span>SELECTED PLAYER: HUMAN</span></div>
+</aside>
+<section class="left-panel"><div class="section-title">THE WHOLE PITCH <span>YOU ↑</span></div><canvas id="minimap" width="200" height="270" aria-label="Full pitch map"></canvas><div class="selected-player"><span>YOUR PLAYER</span><strong id="selected-player">9 · J. Álvarez · ST</strong></div><div id="event-log" aria-live="polite"></div></section>
+<section class="controls"><div class="control-line"><span><kbd>W A S D</kbd> Move / aim</span><span><kbd>SHIFT</kbd> Sprint</span><span><kbd>J</kbd> Hold to pass</span><span><kbd>U</kbd> Lob</span><span><kbd>I</kbd> Chip</span><span><kbd>K</kbd> Tackle</span><span><kbd>L</kbd> Switch</span><span><kbd>C</kbd> Camera</span></div><div class="shot-charge"><div id="charge-fill"></div></div><p id="charge-label">Hold Space, J, U or I to set power</p><p><kbd>SPACE</kbd> Shoot · <kbd>J</kbd> Pass · <kbd>U</kbd> Lob · <kbd>I</kbd> Chip · Hold longer for more power. Release to kick.<br>Hold WASD to aim passes and shots.</p><small>Both keepers: automatic · L: switch outfield player · Yellow: your player · Blue: inspected JEV player</small></section>
+<div id="banner" class="banner" hidden></div>
+<section id="start-screen" class="start-screen"><span class="eyebrow">ELEVEN AGAINST ELEVEN</span><h2>Build the play.</h2><p>You control Argentina in sky blue and white.<br>JEV controls your nine teammates, Spain in red, and both goalkeepers.<br>Choose its plan. Find the space. Score.</p><button id="start" class="primary">START MATCH <span>→</span></button><p class="small">Two 90-second halves. Change the plan at any time.<br>Live play makes JEV API calls. Practice uses local rules.</p><a href="/">Back to penalty shootout</a></section>
+<section id="pause-screen" class="pause-screen" hidden><span id="pause-kicker" class="eyebrow">MATCH PAUSED</span><h2 id="pause-title">Take a breath.</h2><p id="pause-copy">Choose a team plan, then continue.</p><button id="resume" class="primary">CONTINUE <span>→</span></button><button id="restart" class="secondary">NEW MATCH</button></section>
+<div id="error" class="error" hidden></div><script type="module" src="/src/match/game.mjs"></script>
+</body></html>
